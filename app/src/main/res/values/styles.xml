@@ -9,4 +9,28 @@
     </style>
 
 
+    <style name="OverlayThemeLime" parent="AppTheme">
+        <item name="colorPrimary">@color/md_lime_500</item>
+        <item name="colorPrimaryDark">@color/md_lime_700</item>
+        <item name="colorAccent">@color/md_amber_A400</item>
+    </style>
+
+    <style name="OverlayThemeRed" parent="AppTheme">
+        <item name="colorPrimary">@color/md_red_500</item>
+        <item name="colorPrimaryDark">@color/md_red_700</item>
+        <item name="colorAccent">@color/md_yellow_A400</item>
+    </style>
+
+    <style name="OverlayThemeGreen" parent="AppTheme">
+        <item name="colorPrimary">@color/md_green_500</item>
+        <item name="colorPrimaryDark">@color/md_green_700</item>
+        <item name="colorAccent">@color/md_pink_A400</item>
+    </style>
+
+    <style name="OverlayThemeBlue" parent="AppTheme">
+        <item name="colorPrimary">@color/md_blue_500</item>
+        <item name="colorPrimaryDark">@color/md_blue_700</item>
+        <item name="colorAccent">@color/md_turquoise_A400</item>
+    </style>
+
 </resources>

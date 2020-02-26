@@ -10,21 +10,27 @@ import androidx.appcompat.app.AppCompatActivity
 class MainActivity : AppCompatActivity() {
 
     lateinit var sharedPreferences: SharedPreferences
-    val themeKey = "currentTheme"
+    private val themeKey = "currentTheme"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-//        getTheme()applyStyle(R.style.OverlayThemeLime, true) in Java
-        theme.applyStyle(R.style.OverlayThemeLime, true)
-        setContentView(R.layout.activity_main)
 
         sharedPreferences = getSharedPreferences(
             "ThemePref",
             Context.MODE_PRIVATE
         )
 
-//        val sharedPreferencesEditor = sharedPreferences.edit()
+//        getTheme()applyStyle(R.style.OverlayThemeLime, true) in Java
+//        theme.applyStyle(R.style.OverlayThemeBlue, true) // -> Replaced
+        when (sharedPreferences.getString(themeKey, "red")) {
+            "lime" ->  theme.applyStyle(R.style.OverlayThemeLime, true)
+            "red" ->  theme.applyStyle(R.style.OverlayThemeRed, true)
+            "green" ->  theme.applyStyle(R.style.OverlayThemeGreen, true)
+            "blue" ->  theme.applyStyle(R.style.OverlayThemeBlue, true)
+        }
+
+        setContentView(R.layout.activity_main)
+
     }
 
     fun onClick(view: View) {
@@ -47,7 +53,12 @@ class MainActivity : AppCompatActivity() {
 
         }
 
-        startActivity(intent)
+//        val intent = intent
+//        intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION)
+//        finish()
+//        startActivity(intent)
+
+        recreate()
     }
 
 }

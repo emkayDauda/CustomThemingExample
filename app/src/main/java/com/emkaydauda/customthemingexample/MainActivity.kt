@@ -1,6 +1,7 @@
 package com.emkaydauda.customthemingexample
 
 import android.content.Context
+import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.View
@@ -53,12 +54,12 @@ class MainActivity : AppCompatActivity() {
 
         }
 
-//        val intent = intent
-//        intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION)
-//        finish()
-//        startActivity(intent)
+        val intent = intent
+        intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION)
+        finish()
+        startActivity(intent)
 
-        recreate()
+//        recreate()
     }
 
 }

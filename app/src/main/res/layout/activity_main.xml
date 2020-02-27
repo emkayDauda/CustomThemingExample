@@ -12,6 +12,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/blue" app:layout_constraintStart_toStartOf="parent"
             android:textAllCaps="false"
+            android:background="?colorAccent"
             app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="24dp"
             app:layout_constraintEnd_toEndOf="parent" android:onClick="onClick"/>
     <Button
@@ -20,6 +21,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/green"
             android:textAllCaps="false"
+            android:background="?colorAccent"
             app:layout_constraintStart_toStartOf="@+id/blue" android:layout_marginBottom="16dp"
             app:layout_constraintBottom_toTopOf="@+id/blue" android:onClick="onClick"/>
     <Button
@@ -28,6 +30,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/red"
             android:textAllCaps="false"
+            android:background="?colorAccent"
             app:layout_constraintStart_toStartOf="@+id/green" android:layout_marginBottom="16dp"
             app:layout_constraintBottom_toTopOf="@+id/green" android:onClick="onClick"/>
     <Button
@@ -35,6 +38,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/lime"
+            android:background="?colorAccent"
             android:textAllCaps="false"
             app:layout_constraintStart_toStartOf="@+id/red" android:layout_marginBottom="16dp"
             app:layout_constraintBottom_toTopOf="@+id/red" android:onClick="onClick"/>
